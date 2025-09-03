@@ -2,8 +2,8 @@
 
 This project investigates member behavior leading to membership cancellation within a 105-day period and provides actionable strategies to retain members, reduce churn, and increase business profitability. I am partnering with a gym manager to better understand current trends in churn and propose retention strategies.
 
-View Github Repository <br>
-Return to Portfolio
+[View Github Repository for more details](https://github.com/Tony-gh123/Churn-Data-Analysis) <br>
+[Return to Portfolio](https://tony-gh123.github.io/yeral.github.io/)
 
 SKILLS: Python (Numpy, Pandas), SQL, SQLite, Matplotlib, Seaborn, Storytelling, Time Series Analysis, Business Intelligence, Behavioral Analytics. 
 
