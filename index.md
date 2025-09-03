@@ -1,8 +1,8 @@
 # Behind the Membership Door: Behavioral Insights for Retention & Growth
 
-This project investigates member behavior leading to membership cancellation within a 105-day period and provides actionable strategies to retain members, reduce churn, and increase business profitability. I am partnering with a gym manager to better understand current trends in churn and propose retention strategies.
+This project investigates member behaviors leading to membership cancellation within a gym's median membership tenure and provides actionable strategies to retain members, reduce churn, and increase business profitability. I partnered with a gym manager to uncover churn patterns and design targeted interventions.
 
-[View Github Repository for more details](https://github.com/Tony-gh123/Churn-Data-Analysis) <br>
+[View Github Repository](https://github.com/Tony-gh123/Churn-Data-Analysis) <br>
 [Return to Portfolio](https://tony-gh123.github.io/yeral.github.io/)
 
 SKILLS: Python (Numpy, Pandas), SQL, SQLite, Matplotlib, Seaborn, Storytelling, Time Series Analysis, Business Intelligence, Behavioral Analytics. 
@@ -226,6 +226,5 @@ _Disclaimer: The insights in this report are based on synthetic data created for
 
 ## Appendices
 
-Return to HomePage: https://tony-gh123.github.io/yeral.github.io/
-
-See Github Repository for more details:
+[View Github Repository](https://github.com/Tony-gh123/Churn-Data-Analysis) <br>
+[Return to Portfolio](https://tony-gh123.github.io/yeral.github.io/)
