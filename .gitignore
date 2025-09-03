@@ -1,0 +1,8 @@
+# dotenv
+.env
+# local dbs and data
+*.sqlite
+sqlite_db
+
+database/csv_files
+
