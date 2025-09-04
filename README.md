@@ -5,7 +5,7 @@ This project investigates member behaviors leading to membership cancellation wi
 View Project Here: https://tony-gh123.github.io/Churn-Data-Analysis/ <br>
 View Portfolio Here: https://tony-gh123.github.io/yeral.github.io/ 
 
-SKILLS: Python (Numpy, Pandas), SQL, SQLite, Matplotlib, Seaborn, Storytelling, Time Series Analysis, Business Intelligence, Behavioral Analytics.  
+SKILLS: Python (Numpy, Pandas), SQL, SQLite, Matplotlib, Seaborn, Storytelling, Time Series Analysis, Business Intelligence, Behavioral Analytics.   
 
 **Table of Contents**
 - [Executive Summary](#executive-summary)
