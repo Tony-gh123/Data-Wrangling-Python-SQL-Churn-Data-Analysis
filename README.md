@@ -1,6 +1,6 @@
 # Behind the Membership Door: Behavioral Insights for Retention & Growth
 
-This project investigates member behaviors leading to membership cancellation within a gym's median membership tenure and provides actionable strategies to retain members, reduce churn, and increase business profitability. I partnered with a gym manager to uncover churn patterns and design targeted interventions.
+This project investigates member behavior leading to membership cancellation within a gym's median membership tenure and provides actionable strategies to retain members, reduce churn, and increase business profitability. I partnered with a gym manager to uncover churn patterns and design targeted interventions.
 
 View Project Here: https://tony-gh123.github.io/Churn-Data-Analysis/ <br>
 View Portfolio Here: https://tony-gh123.github.io/yeral.github.io/ 
@@ -14,7 +14,7 @@ SKILLS: Python (Numpy, Pandas), SQL, SQLite, Matplotlib, Seaborn, Storytelling, 
 - [Insights Deep Dive](#insights-deep-dive)
     - Demographics & Sales Seasonality
     - Overall Retention & Churn Analysis
-    - Churn by Membership Type
+    - Membership Type & Churn Analysis
     - Check-In Behavior & Usage Patterns
     - Agreement Type & Check-in Bucket
     - Class Attendance & Personal Training Impact
@@ -32,21 +32,21 @@ SKILLS: Python (Numpy, Pandas), SQL, SQLite, Matplotlib, Seaborn, Storytelling, 
 
 ## Executive Summary
 
-IKIGAI GYM loses 50% of its members by the 105-day mark, leading to significant revenue decline before the critical January and summer sales spikes. Our data reveals that membership type, engagement patterns, and payment behaviors are key drivers of retention and churn. By focusing on annual memberships, boosting engagement through classes and personal training, and proactively addressing early warning signals like low check-ins rates and late payments, the gym can extend member lifecycles and stabilize revenue across sales cycles. Key insights include:
+IKIGAI GYM loses half of its members by the 105-day mark, leading to steep revenue decline before critical January and summer sales spikes. Our analysis shows that membership type, engagement behaviors, and payment reliability are the strongest drivers of retention and churn. By promoting annual agreements, boosting structured engagement, and proactively intervening on early risk signals, the gym can extend member lifecycles and stabilize recurring revenue.
 
-- **Annual contracts significantly outperform month-to-month (105-day retention)**: Annual members churn at 11.6–13.6% within 105 days, compared to 18–25.8% for month-to-month members. Promoting annual plans to stable, local members can reduce early cancellations.
+- **Annual contracts drive stability**: Within 105 days, annual members churn at just 11.6–13.6%, compared to 18–25.8% for month-to-month contracts. Steering stable, local members toward annual plans reduces early cancellations.
 
-- **Member engagement extends 105-day tenure**: Members with 4+ monthly check-ins churn at 15.3% (vs. 43% for <4 check-ins), and those attending classes or personal training sessions show 17.3% and 12% churn rates, respectively (vs. 21.3% for non-participants). Combining both drops churn to 11%. Encouraging engagement through classes, personal training, and purchases (28.3% churn for buyers vs. 16.9% for non-buyers) strengthens loyalty.
+- **Engagement protects tenure**: Members with 4+ monthly check-ins churn at 15.3% (vs. 43% for <4 check-ins). Those attending classes or personal training sessions see churn rates of 17.3% and 12%, respectively, while members who do both drop to just 11%. Even small purchases improve retention (16.9% vs. 28.3% for non-buyers).
 
-- **Early warning signals can be acted on**: Members with 30+ days of inactivity face a 43.9% cancellation risk, and those with over half their payments late churn at 97.5% within 105 days. Automated flagging, personalized re-engagement, and proactive payment interventions can recover at-risk members.
+- **Early warning signals are actionable**: Inactivity of 30+ days raises cancellation risk to 43.9%, and members who pay more than half their bills late churn at 97.5%. Automated flagging, personalized re-engagement, and proactive payment interventions are essential to recover at-risk members.
 
-These findings highlight key drivers of retention and churn. They suggest that focusing on membership type, engagement activities, and timely re-engagement efforts has the potential to meaningfully increase monthly retention and reduce churn across sales cycles.
+Retention hinges on aligning commitment with engagement. By promoting longer-term contracts, embedding members in structured activities, and acting quickly on payment or attendance red flags, IKIGAI GYM can meaningfully extend the average membership lifecycle and unlock steady, sustainable growth.
 
 ## Background
 
 The fitness club **IKIGAI GYM** operates in a competitive urban market where seasonal spikes and transient population make retention critical for profitability. The club is overseen by a small corporate division responsible for staff, compliance, and financial performance.
 
-Currently, retention is monitored only through basic churn reports, with limited visibility into member lifecycles or behavior leading up to cancellation. Experiencing only seasonal sales peaks (January, June, August) further challenge long-term growth. The corporate team is particularly interested in extending the average membership lifecycle during slower months to stabilize revenue.
+Member retention is currently only monitored through basic churn reports, with limited visibility into member lifecycles or behavior leading up to cancellation. Experiencing only seasonal sales peaks (January, June, August) further challenge long-term growth. The corporate team is particularly interested in extending the average membership lifecycle during slower months to stabilize revenue.
 
 ### Database Schema
 
@@ -72,47 +72,43 @@ We observe an initial sale peak at the beginning of the year, following by slowe
 
 ## Overall Churn Analysis
 
-While quarterly churn naturally fluctuates as new members join, a more reliable view comes from examining patterns across a member’s lifetime, regardless of when they started. By aligning all members from their start date and measuring how long they remain before canceling, we can observe the realistic behavioral patterns across tenure. This approach shows how likely a member is to remain active at different stages in their journey.
+Understanding the overall churn curve is essential because it shows when members are most at risk of leaving and how quickly attrition accumulates over time. Instead of looking only at quarterly churn, aligning members by their start date provides a clearer view of the membership lifecycle. This “lifetime lens” highlights the critical windows where targeted interventions can have the greatest impact.
 
-- **First Month (Day 30)**: A new member has about a 21% probability of canceling within their first month.
+- **First Month (Day 30)**: About 21% of new members cancel within their first month. This highlights a critical “trial period,” where early onboarding and engagement efforts are essential.
 
-- **Second Month (Day 60)**: By the end of two months, the cumulative probability of churn rises to ~35%.
+- **Second Month (Day 60)**: By two months, churn rises to ~35%. Members who haven’t built consistent habits or connections are more likely to leave at this stage.
 
-- **Third Month (Day 90)**: By three months, there is nearly a 44% chance of cancellation.
+- **Third Month (Day 90)**: Nearly 44% have canceled by the three-month mark, showing that the first 90 days are a decisive window for long-term retention.
 
-- **Fourth Month (Day 120)**: By four months, the probability of churn exceeds 56%.
+- **Fourth Month (Day 120)**: By four months, more than half of members (56%) have left. Beyond this point, retention depends on actively re-engaging those at risk.
 
-The median tenure = 105 days, showing half of all new members cancel within 3.5 months.
+The median tenure is just 105 days (3.5 months), meaning half of all members leave within the first three months.
 <br>
 
 <img src="Images/retention_churn_rates.png" alt="Retention Churn Rate" width="475"/>
 <img src="Images/member_tenure_days.png" alt="Retention Churn Rate" width="470"/>
 
-## Churn Analysis by Membership Type
+## Membership Type & Churn Analysis
 
-We can further break members down by membership type to see which plans perform better at retaining members within our 105-day benchmark.
+Membership type is a strong predictor of retention because it reflects the initial commitment made by the buyer. Members who commit to annual plans are signaling longer-term intent, while those on month-to-month contracts keep their options open. By comparing the two, we can see which agreements are most effective at holding members beyond the critical 105-day benchmark.
 
-- **Annual memberships are most stable**: Standard Annual members show the lowest churn rate at 15.5%, followed closely by Passport Annual at 18.2% (11.56% and 13.64% respectively for cancelations within the 105-day window).
+- **Annual memberships are most stable**: Standard Annual members show the lowest churn rate at 15.5%, followed closely by Passport Annual at 18.2% (with only 11.56% and 13.64% canceling within the 105-day window). These members are less likely to drop out early, suggesting that longer commitments create stronger incentives to stay engaged.
 
-- **Month-to-month memberships are riskier**: Standard M2M members churn at 36.4%, while Passport M2M members are the most likely to leave, with churn over 41.9% (18% and 25.83% respectively within the 105-day window).
-
-Across both Standard and Passport plans, annual commitments consistently outperform month-to-month contracts in reducing churn.
+- **Month-to-month memberships are riskier**: Standard M2M members churn at 36.4%, while Passport M2M members are the most likely to leave, with churn over 41.9% (18% and 25.83% respectively within the 105-day window). The flexibility of these plans attracts new members, but also makes it easier to cancel when motivation dips.
 <br>
 
 <img src='Images/retention_by_agreement.png' alt='retention_by_agreement' width='500'/>
 <img src='Images/churn_rate_by_agreement_type.png' alt='churn_rate_by_agreement_type' width='426'/>
 
-## Check-In History
+## Check-In Behavior & Usage Patterns
 
-The gym’s peak hours are between 7–10 AM and 4–6 PM, aligning with typical pre-work and post-work schedules. Understanding check-in behavior during these windows not only helps with staffing and resource allocation, but also provides valuable insight into member commitment and churn risk.
+Check-ins are the most fundamental signal of member engagement — if members aren’t showing up, they’re unlikely to stay. Tracking usage patterns not only helps with staffing during peak hours (7–10 AM and 4–6 PM), but also provides one of the strongest predictors of churn risk, especially within the critical 105-day window.
 
-Check-ins represent the most fundamental form of engagement. Members who don’t use the facility are far more likely to cancel, especially before the 105-day mark. 
+- **Usage frequency drives retention**: Members who check in fewer than 4 times per month churn at a high rate (43.01%), while those with more than 4 monthly visits churn at just 15.3%.
 
-- **Usage frequency drives retention**: Members who check in fewer than 4 times per month churn at a  high rate (43.01%), while those with more than 4 monthly visits churn just < 15.3%.
+- **The “middle ground” is safer**: Members who check in between 4–12 times per month have a moderate churn rate of ~15.04%, which aligns closely with the gym’s overall average of 8–9 visits per month.
 
-- **The “middle ground” is safer**: Members who check in between 4–12 times per month have a moderate churn rate of ~15.04%, aligning closely with the gym’s overall average of 8–9 visits.
-
-- **Active vs. churned behavior**: Current active members average 9 check-ins per month, compared to just 7 for members who cancel by the 105 day window.
+- **Active vs. churned behavior**: Current active members average 9 check-ins per month, compared to just 7 for members who cancel by the 105-day mark.
 
 - **Complete inactivity predicts cancellation**: Members who go 30+ days without a check-in have a 43.94% likelihood of canceling, versus only 5.55% for those who stay consistently active.
 <br>
@@ -122,11 +118,13 @@ Check-ins represent the most fundamental form of engagement. Members who don’t
 
 ## Agreement Type × Check-in Bucket
 
+Looking at membership type in combination with check-in frequency reveals the structural backbone of retention. Agreement terms reflect commitment, while check-in behavior reflects engagement — together, they explain why some members stay and others leave.
+
 - **Usage drives loyalty**: Low monthly check-in users churn heavily (38–71%), while high monthly check-in users are extremely stable (3-9%).
 
 - **Commitment matters**: Annual members churn far less than M2M in the stable (medium) monthly check-in bucket (Annual: 10%-11% vs. M2M: 19%-29%).
 
-The heatmap shows how contract type (Annual vs. M2M) interacts with gym usage frequency (Low, Medium, High check-ins). This captures the structural backbone of retention.
+The heatmap shows how contract type (Annual vs. M2M) interacts with gym usage frequency (Low, Medium, High check-ins).
 
 <img src='Images/agreement_checkin_heatmap.png' alt='agreement_checkin_heatmap' width='500'/>
 
@@ -134,11 +132,11 @@ The heatmap shows how contract type (Annual vs. M2M) interacts with gym usage fr
 
 Classes and Personal Training sessions follow the same peak-hour patterns observed in overall check-ins (7–10 AM and 4–6 PM). These engagement activities not only increase facility use but also create social accountability, structure, and personalized progress tracking, all of which directly reduce churn by the 105-day period.
 
-- **Classes boost retention**: Members who attended at least one class churn at a lower rate (17.32%) compared to those who never attended (21.26%).
+- **Classes boost retention**: Members who attended at least one class churn at a lower rate (17.3%) compared to those who never attended (21.3%). Even occasional participation provides a meaningful lift..
 
-- **Personal training strengthens commitment**: Members who completed at least one PT session have a churn rate of just 12.0%, compared to 19.1% for those who never participate.
+- **Personal training strengthens commitment**: Members who complete at least one PT session churn at just 12.0%, versus 19.1% for those who never participate. Personalized attention appears to deepen commitment quickly.
 
-- **The combo effect is strongest**: When members attend both classes and PT, churn drops even further — just 11%, compared to nearly 21% for members who do neither. Even modest exposure to both activities compounds the retention benefit.
+- **The combo effect is strongest**: Members who do both classes and PT churn at only 11%, compared to nearly 21% for those who do neither. Even modest exposure to both activities compounds the benefit.
 
 Group activities like SPIN appear to be particularly effective in keeping members engaged. As for Personal Training, even minimal exposure to PT yields a meaningful improvement in member retention. Promoting class participation and PT sessions can significantly reduce early cancellations.
 <br>
@@ -148,9 +146,9 @@ Group activities like SPIN appear to be particularly effective in keeping member
 <img src='Images/class_pt_churn.png' alt='pt_churn' width='505'/>
 
 ## Purchase Behavior
-Encouraging purchases — from small items like water bottles to add-ons like gear or snacks — can serve as a retention strategy by reinforcing members’ sense of belonging.
+Purchases inside the gym — from small items like water bottles to add-ons like gear or snacks — represent more than secondary revenue. They act as signals of commitment, reinforcing members’ sense of belonging and identity within the gym community.
 
-- **Purchases signal commitment**: Members who make at least one purchase have a churn rate of 28.26%, compared to 16.92% for those who never purchase.
+- **Purchases signal commitment**: Members who make at least one purchase churn at just 16.9%, compared to 28.3% for those who never purchase. T
 
 This means that engaged spenders are 11.34% less likely to cancel, showing that even small transactions reflect deeper attachment to the gym.
 <br>
@@ -159,20 +157,18 @@ This means that engaged spenders are 11.34% less likely to cancel, showing that 
 
 ## Late Payments & Retention
 
-Payment timeliness is one of the strongest early signals of member commitment versus dropout risk. Proactively addressing late payments (e.g., reminders, payment plans, or in-person collection at check-ins) could help recover at-risk members before cancellation. More importantly, collecting payments is crucial for members considered overall late in their payment behavior. 
+Payment behavior is one of the clearest early signals of member commitment. Late payments not only create operational strain but also strongly predict early dropout. Proactively addressing payment issues through reminders, flexible plans, or check-in interventions can help recover at-risk members before cancellation. 
 
 - **Late payments are a red flag**: Members with a history of paying more than half their bills late have a churn rate of 97.5% within the first 105 days of their membership.
 
 - **On-time payers are far more stable**: Only 12.6% of consistently on-time members cancel within the same period.
-
-Note: Late payment behavior is considered to half of their payments made late. 
 <br>
 
 <img src='Images/payment_churn.png' alt='payment_churn' width='450'/>
 
 ## Cancellation Reasons & External Factors
 
-While our data indicates strong predictors of cancellations, our data also shows canceled members (e.g female, 40, Standard M2M, 196 check-ins, canceled due to relocation) with strong engagement patterns. This suggests high engagement doesn’t always prevent churn and are due to external factors like relocation.
+While our data indicates strong predictors of cancellations, our data also shows churned members (e.g female, 40, Standard M2M, 196 check-ins, canceled due to relocation) with strong engagement patterns. This suggests high engagement doesn’t always prevent churn and are due to external factors like relocation.
 
 Below is the most common reasons for cancellations according to the voluntary exit survey.
 <br>
