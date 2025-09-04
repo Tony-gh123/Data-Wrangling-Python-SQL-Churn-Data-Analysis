@@ -1,6 +1,6 @@
 # Behind the Membership Door: Behavioral Insights for Retention & Growth
 
-This project investigates member behavior leading to membership cancellation within a gym's median membership tenure and provides actionable strategies to retain members, reduce churn, and increase business profitability. I partnered with a gym manager to uncover churn patterns and design targeted interventions.
+This project examines member behavior leading to membership cancellation within a gym's median membership tenure and offers actionable strategies to retain members, reduce churn, and enhance business profitability. I partnered with a gym manager to gather data, uncover churn patterns and design targeted interventions.
 
 View Project Here: https://tony-gh123.github.io/Churn-Data-Analysis/ <br>
 View Portfolio Here: https://tony-gh123.github.io/yeral.github.io/ 
@@ -32,7 +32,7 @@ SKILLS: Python (Numpy, Pandas), SQL, SQLite, Matplotlib, Seaborn, Storytelling, 
 
 ## Executive Summary
 
-IKIGAI GYM loses half of its members by the 105-day mark, leading to steep revenue decline before critical January and summer sales spikes. Our analysis shows that membership type, engagement behaviors, and payment reliability are the strongest drivers of retention and churn. By promoting annual agreements, boosting structured engagement, and proactively intervening on early risk signals, the gym can extend member lifecycles and stabilize recurring revenue.
+IKIGAI GYM is currently losing half of its members by the 105-day mark. Sales spikes occur in January, June, and August; retaining members outside of these peak periods is essential for stabilizing revenue. Our analysis shows that membership type, engagement behaviors, and payment reliability are the strongest drivers of retention and churn. By promoting annual agreements, boosting structured engagement, and proactively intervening on early risk signals, the gym can extend member lifecycles and stabilize recurring revenue.
 
 - **Annual contracts drive stability**: Within 105 days, annual members churn at just 11.6–13.6%, compared to 18–25.8% for month-to-month contracts. Steering stable, local members toward annual plans reduces early cancellations.
 
