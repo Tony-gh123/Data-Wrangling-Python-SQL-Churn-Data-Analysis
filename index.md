@@ -32,7 +32,7 @@ SKILLS: Python (Numpy, Pandas), SQL, SQLite, Matplotlib, Seaborn, Storytelling, 
 
 ## Executive Summary
 
-IKIGAI GYM loses 56.3% of its members by the 105-day mark, leading to significant revenue declines before the critical January and summer sales spikes. Our data reveals that membership type, engagement patterns, and payment behaviors are key drivers of retention and churn. By focusing on annual memberships, boosting engagement through classes and personal training, and proactively addressing early warning signals like low check-ins rates and late payments, the gym can extend member lifecycles and stabilize revenue across sales cycles. Key insights include:
+IKIGAI GYM loses 50% of its members by the 105-day mark, leading to significant revenue decline before the critical January and summer sales spikes. Our data reveals that membership type, engagement patterns, and payment behaviors are key drivers of retention and churn. By focusing on annual memberships, boosting engagement through classes and personal training, and proactively addressing early warning signals like low check-ins rates and late payments, the gym can extend member lifecycles and stabilize revenue across sales cycles. Key insights include:
 
 - **Annual contracts significantly outperform month-to-month (105-day retention)**: Annual members churn at 11.6–13.6% within 105 days, compared to 18–25.8% for month-to-month members. Promoting annual plans to stable, local members can reduce early cancellations.
 
@@ -72,24 +72,25 @@ We observe an initial sale peak at the beginning of the year, following by slowe
 
 ## Overall Churn Analysis
 
-While quarterly churn can naturally increase (gym capacity) as we sign-up more members, we can observe patterns accross a member's lifetime for the current population regardless of when they started. This will allow us to observe what the realistic patterns of behaviors are for member across their tenure. We first measured the overall retention rate (of canceled members) by measuring their total tenure from the start to the termination of their membership. This allow us to see what the current churn trends are leading to the 105-day mark.
+While quarterly churn naturally fluctuates as new members join, a more reliable view comes from examining patterns across a member’s lifetime, regardless of when they started. By aligning all members from their start date and measuring how long they remain before canceling, we can observe the realistic behavioral patterns across tenure. This approach shows how likely a member is to remain active at different stages in their journey.
 
-- **First-month**: By day 30, over 1 in 5 members (21.1%) have already churned, leaving just under 79% retained.
+- **First Month (Day 30)**: A new member has about a 21% probability of canceling within their first month.
 
-- **Second-Month**: By day 60, retention falls to 65%, meaning more than a 1 out of 3 of members (34.9%) have canceled.
+- **Second Month (Day 60)**: By the end of two months, the cumulative probability of churn rises to ~35%.
 
-- **Third-Month**: By day 90, retention drops below 56%, with nearly half of members (44.3%) canceled.
+- **Third Month (Day 90)**: By three months, there is nearly a 44% chance of cancellation.
 
-- **Fourth-Month**: By day 120, retention falls below 44%, and 56.3% of members have churned.
+- **Fourth Month (Day 120)**: By four months, the probability of churn exceeds 56%.
 
 The median tenure = 105 days, showing half of all new members cancel within 3.5 months.
 <br>
 
 <img src="Images/retention_churn_rates.png" alt="Retention Churn Rate" width="475"/>
+<img src="Images/member_tenure_days.png" alt="Retention Churn Rate" width="470"/>
 
 ## Churn Analysis by Membership Type
 
-Now that we have an understanding of what churn trends are, we can further divide each member based on the type of membership they had. This allow us to see which membership performs better at retaining members within our goal.
+We can further break members down by membership type to see which plans perform better at retaining members within our 105-day benchmark.
 
 - **Annual memberships are most stable**: Standard Annual members show the lowest churn rate at 15.5%, followed closely by Passport Annual at 18.2% (11.56% and 13.64% respectively for cancelations within the 105-day window).
 
@@ -105,7 +106,7 @@ Across both Standard and Passport plans, annual commitments consistently outperf
 
 The gym’s peak hours are between 7–10 AM and 4–6 PM, aligning with typical pre-work and post-work schedules. Understanding check-in behavior during these windows not only helps with staffing and resource allocation, but also provides valuable insight into member commitment and churn risk.
 
-Check-ins are the most fundamental form of engagement — if members are not using the facilities, the likelihood of cancellation by the 105 day rises sharply. When analyzed across all members, several clear patterns emerge: 
+Check-ins represent the most fundamental form of engagement. Members who don’t use the facility are far more likely to cancel, especially before the 105-day mark. 
 
 - **Usage frequency drives retention**: Members who check in fewer than 4 times per month churn at a  high rate (43.01%), while those with more than 4 monthly visits churn just < 15.3%.
 
@@ -119,7 +120,7 @@ Check-ins are the most fundamental form of engagement — if members are not usi
 <img src='Images/checkin_activity.png' alt='check_in_activity' width='450'/>
 <img src='Images/check_in_inactivity.png' alt='check_in_activity' width='482'/>
 
-## Agreement Type & Check-in Bucket
+## Agreement Type × Check-in Bucket
 
 - **Usage drives loyalty**: Low monthly check-in users churn heavily (38–71%), while high monthly check-in users are extremely stable (3-9%).
 
@@ -158,7 +159,7 @@ This means that engaged spenders are 11.34% less likely to cancel, showing that 
 
 ## Late Payments & Retention
 
-Payment timeliness is one of the strongest early signals of member commitment versus dropout risk. Proactively addressing late payments (e.g., reminders, payment plans, or in-person collection at check-ins) could help recover at-risk members before cancellation. More importantly, collecting payments is crutial for members considered overall late in their payment behavior. 
+Payment timeliness is one of the strongest early signals of member commitment versus dropout risk. Proactively addressing late payments (e.g., reminders, payment plans, or in-person collection at check-ins) could help recover at-risk members before cancellation. More importantly, collecting payments is crucial for members considered overall late in their payment behavior. 
 
 - **Late payments are a red flag**: Members with a history of paying more than half their bills late have a churn rate of 97.5% within the first 105 days of their membership.
 
@@ -177,6 +178,7 @@ Below is the most common reasons for cancellations according to the voluntary ex
 <br>
 
 <img src='Images/cancel_reasons.png' alt='cancel_reasons' width='500'/>
+
 
 # Key Recommendations
 
@@ -214,13 +216,11 @@ Late payments are one of the strongest churn signals: members with more than hal
 
 ## Assumptions
 
-1. Each member_id acts as a unique identifier across all tables and functions as a foreign key for joining datasets (e.g., demographics, agreements, check-ins, purchases, payments).
+1. It is assumed there are no restrictions on cancellations during the first month. Members are free to exit at any time without contractual penalties. This assumption explains the high early churn rates observed by day 30 and makes “first-month engagement” a critical driver of retention strategy.
 
-2. It is assumed there are no restrictions on cancellations during the first month. Members are free to exit at any time without contractual penalties. This assumption explains the high early churn rates observed by day 30 and makes “first-month engagement” a critical driver of retention strategy.
+2. The analysis considers only four forms of membership: Standard Annual, Passport Annual, Standard Month-to-Month (M2M), and Passport M2M No hybrid or promotional contracts (e.g., trial passes, corporate packages, or family bundles) are included in the dataset. This simplifies comparison but may understate real-world variability.
 
-3. The analysis considers only four forms of membership: Standard Annual, Passport Annual, Standard Month-to-Month (M2M), and Passport M2M No hybrid or promotional contracts (e.g., trial passes, corporate packages, or family bundles) are included in the dataset. This simplifies comparison but may understate real-world variability.
-
-4. Payment timeliness is measured strictly as on-time vs. late, with no partial credit or grace period adjustments.
+3. Payment timeliness is measured strictly as on-time vs. late, with no partial credit or grace period adjustments.
 
 _Disclaimer: The insights in this report are based on synthetic data created for educational and demonstration purposes. They do not reflect real-world behaviors or outcomes and should not be taken as professional advice._
 
