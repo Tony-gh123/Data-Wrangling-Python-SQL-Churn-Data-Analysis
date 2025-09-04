@@ -46,7 +46,7 @@ Retention hinges on aligning commitment with engagement. By promoting longer-ter
 
 The fitness club **IKIGAI GYM** operates in a competitive urban market where seasonal spikes and transient population make retention critical for profitability. The club is overseen by a small corporate division responsible for staff, compliance, and financial performance.
 
-Member retention is currently only monitored through basic churn reports, with limited visibility into member lifecycles or behavior leading up to cancellation. Experiencing only seasonal sales peaks (January, June, August) further challenge long-term growth. The corporate team is particularly interested in extending the average membership lifecycle during slower months to stabilize revenue.
+Member retention is currently only monitored through basic churn reports, with limited visibility into member lifecycles or behavior leading up to cancellation. Experiencing only seasonal sales peaks (January, June, August) further challenges long-term growth. The corporate team is particularly interested in extending the average membership lifecycle during slower months to stabilize revenue.
 
 ### Database Schema
 
@@ -72,15 +72,15 @@ We observe an initial sale peak at the beginning of the year, following by slowe
 
 ## Overall Churn Analysis
 
-Understanding the overall churn curve is essential because it shows when members are most at risk of leaving and how quickly attrition accumulates over time. Instead of looking only at quarterly churn, aligning members by their start date provides a clearer view of the membership lifecycle. This “lifetime lens” highlights the critical windows where targeted interventions can have the greatest impact.
+Understanding the overall churn is essential because it shows when members are most at risk of leaving and how quickly attrition accumulates over time. This highlights the critical windows where targeted interventions can have the greatest impact.
 
-- **First Month (Day 30)**: About 21% of new members cancel within their first month. This highlights a critical “trial period,” where early onboarding and engagement efforts are essential.
+- **Day 30**: About 21% of members cancel within their first month, making this a critical “trial period” where onboarding and engagement matter most.
 
-- **Second Month (Day 60)**: By two months, churn rises to ~35%. Members who haven’t built consistent habits or connections are more likely to leave at this stage.
+- **Day 60**: Churn rises to ~35%, often reflecting members who haven’t built consistent habits or connections.
 
-- **Third Month (Day 90)**: Nearly 44% have canceled by the three-month mark, showing that the first 90 days are a decisive window for long-term retention.
+- **Day 90**: Nearly 44% have canceled, confirming the first three months as a decisive window for long-term retention.
 
-- **Fourth Month (Day 120)**: By four months, more than half of members (56%) have left. Beyond this point, retention depends on actively re-engaging those at risk.
+- **Day 120**: More than half (56%) have left. Beyond this point, sustained retention depends on re-engaging those at risk.
 
 The median tenure is just 105 days (3.5 months), meaning half of all members leave within the first three months.
 <br>
