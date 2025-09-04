@@ -16,11 +16,11 @@ SKILLS: Python (Numpy, Pandas), SQL, SQLite, Matplotlib, Seaborn, Storytelling, 
     - Overall Retention & Churn Analysis
     - Churn by Membership Type
     - Check-In Behavior & Usage Patterns
+    - Agreement Type & Check-in Bucket
     - Class Attendance & Personal Training Impact
     - Purchase Behavior & Engagement Signals
     - Payment Timeliness & Retention
     - Cancellation Reasons & External Factors
-    - Agreement Type × Check-in Bucket
 - [Key Recommendations](#key-recommendations)
     - Maximize Agreement Opportunities for Local Members
     - Recognize Check-In Patterns to Re-Engage Members
@@ -72,7 +72,7 @@ We observe an initial sale peak at the beginning of the year, following by slowe
 
 ## Overall Churn Analysis
 
-While quarterly churn can naturally increase (gym capacity) as we sign-up more members, we can observe patterns accross a member's lifetime for the current population regardless of when they started. This will allow us to observe what the realistic patterns of behaviors are for member across their tenure. We first measured the overall retention rate (of canceled members) by measuring their total tenure from the start to the termination of their membership. This allow us to see what the current churn trends are leading to the 104-day mark.
+While quarterly churn can naturally increase (gym capacity) as we sign-up more members, we can observe patterns accross a member's lifetime for the current population regardless of when they started. This will allow us to observe what the realistic patterns of behaviors are for member across their tenure. We first measured the overall retention rate (of canceled members) by measuring their total tenure from the start to the termination of their membership. This allow us to see what the current churn trends are leading to the 105-day mark.
 
 - **First-month**: By day 30, over 1 in 5 members (21.1%) have already churned, leaving just under 79% retained.
 
@@ -118,6 +118,16 @@ Check-ins are the most fundamental form of engagement — if members are not usi
 
 <img src='Images/checkin_activity.png' alt='check_in_activity' width='450'/>
 <img src='Images/check_in_inactivity.png' alt='check_in_activity' width='482'/>
+
+## Agreement Type & Check-in Bucket
+
+- **Usage drives loyalty**: Low monthly check-in users churn heavily (38–71%), while high monthly check-in users are extremely stable (3-9%).
+
+- **Commitment matters**: Annual members churn far less than M2M in the stable (medium) monthly check-in bucket (Annual: 10%-11% vs. M2M: 19%-29%).
+
+The heatmap shows how contract type (Annual vs. M2M) interacts with gym usage frequency (Low, Medium, High check-ins). This captures the structural backbone of retention.
+
+<img src='Images/agreement_checkin_heatmap.png' alt='agreement_checkin_heatmap' width='500'/>
 
 ## Class Attendance & Personal Training Retention Impact
 
@@ -167,16 +177,6 @@ Below is the most common reasons for cancellations according to the voluntary ex
 <br>
 
 <img src='Images/cancel_reasons.png' alt='cancel_reasons' width='500'/>
-
-## Agreement Type × Check-in Bucket
-
-- **Usage drives loyalty**: Low monthly check-in users churn heavily (38–71%), while high monthly check-in users are extremely stable (3-9%).
-
-- **Commitment matters**: Annual members churn far less than M2M in the stable (medium) monthly check-in bucket (Annual: 10%-11% vs. M2M: 19%-29%).
-
-The heatmap shows how contract type (Annual vs. M2M) interacts with gym usage frequency (Low, Medium, High check-ins). This captures the structural backbone of retention.
-
-<img src='Images/agreement_checkin_heatmap.png' alt='agreement_checkin_heatmap' width='500'/>
 
 # Key Recommendations
 
