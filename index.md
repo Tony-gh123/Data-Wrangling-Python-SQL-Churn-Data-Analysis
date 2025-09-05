@@ -32,7 +32,7 @@ SKILLS: Python (Numpy, Pandas), SQL, SQLite, Matplotlib, Seaborn, Storytelling, 
 
 ## Executive Summary
 
-Sales spikes occur in January, June, and August; retaining members outside of these peak periods is essential to stabilize revenue. IKIGAI GYM is currently losing half of its members by the 105-day mark, underscoring the urgency of stronger retention efforts. Our analysis shows that membership type, engagement behaviors, and payment reliability are the strongest drivers of retention. By promoting annual agreements, boosting member engagement, and proactively intervening on early risk signals, the gym can extend member lifecycles and stabilize recurring revenue.
+Right now, we see sales spikes in January, June, and August. If we don’t keep members engaged between those peaks, revenue takes a hit. At IKIGAI GYM, half of our members are leaving by the 105-day mark — that’s a clear sign we need stronger retention. The data shows three big drivers: membership type, how engaged members are, and whether they pay reliably. If we push more annual agreements, deepen engagement through classes, small purchases, personal training, and step in early when members show risk, we can extend lifecycles and keep revenue consistent.
 
 - **Annual contracts drive stability**: Annual members churn at just 11.6–13.6%, compared to 18–25.8% for month-to-month contracts. Steering stable, local members toward annual plans reduces early cancellations.
 
