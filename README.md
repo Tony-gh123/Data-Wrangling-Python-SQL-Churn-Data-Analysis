@@ -2,8 +2,7 @@
 
 This project examines member behavior within a gym's median membership tenure and offers actionable strategies to retain members, reduce churn, and enhance business profitability. I partnered with a gym manager to gather data, uncover churn patterns, and design targeted interventions.
 
-View Project Here: https://tony-gh123.github.io/Churn-Data-Analysis/ <br>
-View Portfolio Here: https://tony-gh123.github.io/Python-SQL-Practice-Churn-Data-Analysis/
+View Project Here: https://tony-gh123.github.io/Data-Wrangling-Python-SQL-Churn-Data-Analysis/ <br>
 
 SKILLS: Python (Numpy, Pandas), SQL, SQLite, Matplotlib, Seaborn, Storytelling, Time Series Analysis, Business Intelligence, Behavioral Analytics.   
 
@@ -223,6 +222,6 @@ _Disclaimer: The insights in this report are based on synthetic data created for
 
 ## Appendices
 
-View Project Here: https://tony-gh123.github.io/Churn-Data-Analysis/ <br>
+View Project Here: https://tony-gh123.github.io/Data-Wrangling-Python-SQL-Churn-Data-Analysis/ <br>
 View Portfolio Here: https://tony-gh123.github.io/yeral.github.io/ 
 
